@@ -1,0 +1,80 @@
+<div class="divMargin" fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="start stretch">
+    <div *ngIf="type == 'entrada' else divSalida" fxFlex fxLayout="row" fxLayoutAlign="center center">
+        <div fxFlex="20%">
+        </div>
+        <div fxFlex="80%" fxLayoutAlign.lg="center" fxLayout="column" fxLayoutGap.lg="20">
+            <div fxFlex.lg="100" fxLayoutAlign.lg="center">
+                <h1>Entrada de Vehiculos</h1>
+            </div>
+            <div fxFlex.lg="50" fxLayoutAlign.lg="center" fxLayout.lg="row" fxLayoutGap.lg="20">
+                <mat-form-field appearance="fill" fxFlex.lg="30">
+                    <mat-label>Placa: </mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+                <mat-form-field appearance="fill" fxFlex.lg="30">
+                    <mat-label>Hora Entrada: </mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+            </div>
+            <div fxFlex fxLayoutAlign.lg="center">
+                <button mat-raised-button color="primary">
+                    <mat-icon>edit</mat-icon>
+                    Registrar
+                </button>
+            </div>
+        </div>
+        <div fxFlex="20%">
+        </div>
+    </div>
+
+    <ng-template #divSalida fxFlex>
+        <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+            <div fxFlex="20%">
+            </div>
+            <div fxFlex="80%" fxLayoutAlign.lg="center" fxLayout="column" fxLayoutGap.lg="20">
+                <div fxFlex.lg="100" fxLayoutAlign.lg="center">
+                    <h1>Salida de Vehiculos</h1>
+                </div>
+                <div fxFlex.lg="50" fxLayoutAlign.lg="center" fxLayout.lg="row" fxLayoutGap.lg="20">
+                    <mat-form-field appearance="fill" fxFlex.lg="30">
+                        <mat-label>Placa: </mat-label>
+                        <input matInput type="text">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" fxFlex.lg="30">
+                        <mat-label>Tipo de Vehiculo: </mat-label>
+                        <input matInput type="text">
+                    </mat-form-field>
+                </div>
+                <div fxFlex.lg="50" fxLayoutAlign.lg="center" fxLayout.lg="row" fxLayoutGap.lg="20">
+                    <mat-form-field appearance="fill" fxFlex.lg="30">
+                        <mat-label>Hora Entrada: </mat-label>
+                        <input matInput type="text">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" fxFlex.lg="30">
+                        <mat-label>Hora Salida: </mat-label>
+                        <input matInput type="text">
+                    </mat-form-field>
+                </div>
+                <div fxFlex.lg="50" fxLayoutAlign.lg="center" fxLayout.lg="row" fxLayoutGap.lg="20">
+                    <mat-form-field appearance="fill" fxFlex.lg="30">
+                        <mat-label>Tiempo: </mat-label>
+                        <input matInput type="text">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" fxFlex.lg="30">
+                        <mat-label>Importe: </mat-label>
+                        <input matInput type="text">
+                    </mat-form-field>
+                </div>
+                <div fxFlex fxLayoutAlign.lg="center">
+                    <button mat-raised-button color="primary">
+                        <mat-icon>edit</mat-icon>
+                        Registrar
+                    </button>
+                </div>
+            </div>
+            <div fxFlex="20%">
+            </div>
+        </div>
+    </ng-template>
+    
+</div>

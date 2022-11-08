@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">    
+    <button mat-button [matMenuTriggerFor]="aboveMenu">
+        <mat-icon>add_to_photos</mat-icon>
+        <span> Registrar</span>
+    </button>
+    <mat-menu #aboveMenu="matMenu" yPosition="below">
+        <button mat-menu-item [routerLink]="[ './parking/registrar', 'entrada']">Entrada</button>
+        <button mat-menu-item [routerLink]="[ './parking/registrar', 'salida' ]">Salida</button>
+    </mat-menu>
+    
+    <button mat-button [matMenuTriggerFor]="belowMenu">
+        <mat-icon>directions_car</mat-icon>
+        <span> Dar de Alta a Vehiculo</span>
+    </button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+        <button mat-menu-item  [routerLink]="[ './parking/alta', 'oficial']">Oficial</button>
+        <button mat-menu-item  [routerLink]="[ './parking/alta', 'residente']">Residente</button>
+    </mat-menu>
+    
+    <button mat-button [routerLink]="[ './parking/reiniciar']">
+        <mat-icon>autorenew</mat-icon>
+        <span> Reiniciar Mes</span>
+    </button>
+
+    <button mat-button [routerLink]="[ './parking/pagos']">
+        <mat-icon>payment</mat-icon>
+        <span> Pagos Residentes</span>
+    </button>
+
+</mat-toolbar>
+
+
+
+    
+
+
+    
