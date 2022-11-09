@@ -29,12 +29,14 @@ Funcionamiento breve de cada pagina
 
 | Pagina | URL | Objetivo |
 | ------ | ------ | ------ |
-| Entrada | [/parking/registrar/entrada][PlDb] | Registrar la entrada de un vehiculo |
-| Salida | [/parking/registrar/salida][PlGh] | Registrar la salida de un vehiculo |
-| Alta Oficial | [/parking/alta/oficial][PlGd] | Registar vehiculo como oficial  |
-| Alta Residente | [/parking/alta/residente][PlOd] | Registar vehiculo como residente |
-| Comienza mes | [/parking/reiniciar][PlMe] | Reiniciar los registros de vehiculos oficiales y residentes |
-| Pagos | [/parking/pagos][PlGa] | Generar informe los vehiculos residentes |
+| Entrada | [/parking/registrar/entrada] | Registrar la entrada de un vehiculo |
+| Salida | [/parking/registrar/salida] | Registrar la salida de un vehiculo |
+| Alta Oficial | [/parking/alta/oficial] | Registar vehiculo como oficial  |
+| Alta Residente | [/parking/alta/residente] | Registar vehiculo como residente |
+| Comienza mes | [/parking/reiniciar] | Reiniciar los registros de vehiculos oficiales y residentes |
+| Pagos | [/parking/pagos] | Generar informe los vehiculos residentes |
+
+> Nota: En la carpeta `DisenoFront` se encuentra el template del diseño.
 
 ## Licencia
 
