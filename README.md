@@ -1,27 +1,42 @@
-# AngularProyectoFront
+# Parking
+## _Proyecto FrontEnd FullStack_
+### Casos de Uso
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
+- Registra entrada
+- Registra salida
+- Da de alta vehículo oficial
+- Da de alta vehículo de residente
+- Comienza mes
 
-## Development server
+Clone o descargue el proyecto, luego siga las siguientes indicaciones.
+- Ingrese al proyecto e instale las dependencias: 
+```sh
+cd ProyectoFront_FullStack
+npm install
+```
+- Asegurese de tener instalado el API del [proyecto BackEnd](https://github.com/PLATYPUSCO007/ProyectoBack_FullStack) 
+> Nota: Siga las isntrucciones del `README.me` del proyecto BackEnd.
+- Levante el proyecto Front
+```sh
+ng serve
+```
+- Ingrese a la URL
+```sh
+http://localhost:4200/
+```
+## Paginas
+Funcionamiento breve de cada pagina
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+| Pagina | URL | Objetivo |
+| ------ | ------ | ------ |
+| Entrada | [/parking/registrar/entrada][PlDb] | Registrar la entrada de un vehiculo |
+| Salida | [/parking/registrar/salida][PlGh] | Registrar la salida de un vehiculo |
+| Alta Oficial | [/parking/alta/oficial][PlGd] | Registar vehiculo como oficial  |
+| Alta Residente | [/parking/alta/residente][PlOd] | Registar vehiculo como residente |
+| Comienza mes | [/parking/reiniciar][PlMe] | Reiniciar los registros de vehiculos oficiales y residentes |
+| Pagos | [/parking/pagos][PlGa] | Generar informe los vehiculos residentes |
 
-## Code scaffolding
+## Licencia
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+MIT
+**Free Software, Hell Yeah!**
