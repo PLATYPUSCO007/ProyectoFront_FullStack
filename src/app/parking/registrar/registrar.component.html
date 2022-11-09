@@ -9,15 +9,15 @@
             <div fxFlex.lg="50" fxLayoutAlign.lg="center" fxLayout.lg="row" fxLayoutGap.lg="20">
                 <mat-form-field appearance="fill" fxFlex.lg="30">
                     <mat-label>Placa: </mat-label>
-                    <input matInput type="text">
+                    <input matInput type="text" [(ngModel)]="estacionamiento.vehiculo_placa">
                 </mat-form-field>
                 <mat-form-field appearance="fill" fxFlex.lg="30">
                     <mat-label>Hora Entrada: </mat-label>
-                    <input matInput type="text">
+                    <input matInput type="text" [(ngModel)]="estacionamiento.hora_entrada" disabled>
                 </mat-form-field>
             </div>
             <div fxFlex fxLayoutAlign.lg="center">
-                <button mat-raised-button color="primary">
+                <button mat-raised-button color="primary" (click)="insert()">
                     <mat-icon>edit</mat-icon>
                     Registrar
                 </button>
@@ -38,35 +38,35 @@
                 <div fxFlex.lg="50" fxLayoutAlign.lg="center" fxLayout.lg="row" fxLayoutGap.lg="20">
                     <mat-form-field appearance="fill" fxFlex.lg="30">
                         <mat-label>Placa: </mat-label>
-                        <input matInput type="text">
+                        <input matInput type="text" (keypress)="buscarEstacionamiento($event)" [(ngModel)]="estacionamiento.vehiculo_placa">
                     </mat-form-field>
                     <mat-form-field appearance="fill" fxFlex.lg="30">
                         <mat-label>Tipo de Vehiculo: </mat-label>
-                        <input matInput type="text">
+                        <input matInput type="text" [(ngModel)]="estacionamiento.nombre" disabled>
                     </mat-form-field>
                 </div>
                 <div fxFlex.lg="50" fxLayoutAlign.lg="center" fxLayout.lg="row" fxLayoutGap.lg="20">
                     <mat-form-field appearance="fill" fxFlex.lg="30">
                         <mat-label>Hora Entrada: </mat-label>
-                        <input matInput type="text">
+                        <input matInput type="text" [(ngModel)]="estacionamiento.hora_entrada" disabled>
                     </mat-form-field>
                     <mat-form-field appearance="fill" fxFlex.lg="30">
                         <mat-label>Hora Salida: </mat-label>
-                        <input matInput type="text">
+                        <input matInput type="text" [(ngModel)]="estacionamiento.hora_salida" disabled>
                     </mat-form-field>
                 </div>
                 <div fxFlex.lg="50" fxLayoutAlign.lg="center" fxLayout.lg="row" fxLayoutGap.lg="20">
                     <mat-form-field appearance="fill" fxFlex.lg="30">
-                        <mat-label>Tiempo: </mat-label>
-                        <input matInput type="text">
+                        <mat-label>Tiempo (min): </mat-label>
+                        <input matInput type="text" [(ngModel)]="estacionamiento.total_tiempo" disabled>
                     </mat-form-field>
                     <mat-form-field appearance="fill" fxFlex.lg="30">
-                        <mat-label>Importe: </mat-label>
-                        <input matInput type="text">
+                        <mat-label>Importe ($): </mat-label>
+                        <input matInput type="text" [(ngModel)]="estacionamiento.importe" disabled>
                     </mat-form-field>
                 </div>
                 <div fxFlex fxLayoutAlign.lg="center">
-                    <button mat-raised-button color="primary">
+                    <button mat-raised-button color="primary" (click)="registrarSalida()" disabled="{{negarRegistro}}">
                         <mat-icon>edit</mat-icon>
                         Registrar
                     </button>

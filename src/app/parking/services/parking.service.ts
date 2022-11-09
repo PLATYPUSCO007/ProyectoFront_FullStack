@@ -1,0 +1,37 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { environment } from '../../../environments/environment';
+import { Estacionamiento } from '../interfaces/estacionamiento.interface';
+import { Vehiculo } from '../interfaces/vehiculo.interface';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ParkingService {
+
+  private baseURL = environment.baseUrl;
+
+  constructor(private http: HttpClient) { }
+
+  setEstacionamiento(estacionamiento: Estacionamiento): Observable<number>
+  {
+    return this.http.post<number>(`${this.baseURL}estacionamiento`, estacionamiento);
+  }
+
+  getOrCreateVehiculo(placa: string): Observable<Vehiculo>
+  {
+    return this.http.get<Vehiculo>(`${this.baseURL}vehiculos/${placa}`);
+  }
+
+  getLastEstacionamiento(placa: string): Observable<Estacionamiento[]>
+  {
+    return this.http.get<Estacionamiento[]>(`${this.baseURL}estacionamiento/${placa}`);
+  }
+
+  updateEstacionamiento(estacionamiento: Estacionamiento): Observable<Estacionamiento>
+  {
+    return this.http.put<Estacionamiento>(`${this.baseURL}estacionamiento/${estacionamiento.id}`, estacionamiento);
+  }
+}
