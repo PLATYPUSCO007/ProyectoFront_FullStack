@@ -3,10 +3,10 @@
     </div>
     <div fxFlex.lg="80" fxLayout.lg="column" fxLayoutGap.lg="20">
         <div fxFlex fxLayoutAlign.lg="center">
-            <h1>Reiniciar Mes</h1>
+            <h1>Comienza Mes</h1>
         </div>
         <div fxFlex fxLayoutAlign.lg="center" fxLayout="row">
-            <button mat-raised-button color="primary" (click)="reiniciar()">
+            <button mat-raised-button color="primary" (click)="reiniciar()" disabled="{{isDisabled}}">
                 <mat-icon>cached</mat-icon>
                 Reiniciar
             </button>

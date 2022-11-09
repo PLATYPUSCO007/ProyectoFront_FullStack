@@ -34,4 +34,19 @@ export class ParkingService {
   {
     return this.http.put<Estacionamiento>(`${this.baseURL}estacionamiento/${estacionamiento.id}`, estacionamiento);
   }
+
+  updateVehiculo(vehiculo: Vehiculo): Observable<any>
+  {
+    return this.http.put<any>(`${this.baseURL}vehiculos/${vehiculo.placa}`, vehiculo);
+  }
+
+  deleteOficial(): Observable<number>
+  {
+    return this.http.delete<number>(`${this.baseURL}estacionamiento/deleteOficial`);
+  }
+
+  updateResidente(): Observable<number>
+  {
+    return this.http.post<number>(`${this.baseURL}estacionamiento/updateResidente`, {});
+  }
 }

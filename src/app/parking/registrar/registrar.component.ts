@@ -125,11 +125,14 @@ export class RegistrarComponent implements OnInit {
   }
 
   calcImporte(){
-    let importe = parseFloat(this.estacionamiento.total_tiempo) * 3;
-    // if (this.estacionamiento.nombre == 'Residente') {
-    //   this.estacionamiento.importe = (parseFloat(this.estacionamiento.importe) + importe).toString();
-    //   return;  
-    // }
+    let importe = 0.0;
+
+    if (this.estacionamiento.nombre == 'Residente') {
+      importe = parseFloat(this.estacionamiento.total_tiempo) * 0.02;
+      // this.estacionamiento.importe = (parseFloat(this.estacionamiento.importe) + importe).toString();
+    }else{
+      importe = parseFloat(this.estacionamiento.total_tiempo) * 0.2;
+    }
     this.estacionamiento.importe = importe.toString();
   }
 
