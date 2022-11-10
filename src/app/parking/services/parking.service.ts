@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -48,5 +48,12 @@ export class ParkingService {
   updateResidente(): Observable<number>
   {
     return this.http.post<number>(`${this.baseURL}estacionamiento/updateResidente`, {});
+  }
+
+  generateFile(nameFile: string): Observable<Blob>
+  {
+    let headers = new HttpHeaders();
+    headers = headers.set('Accept', 'application/csv');
+    return this.http.get<Blob>(`${this.baseURL}file/${nameFile}`, {headers: headers, responseType: 'blob' as 'json'});
   }
 }

@@ -8,11 +8,11 @@
         <div fxFlex fxLayoutAlign.lg="center" fxLayout="row">
             <mat-form-field appearance="fill" fxFlex.lg="30">
                 <mat-label>Nombre del informe : </mat-label>
-                <input matInput type="text">
+                <input matInput type="text" [(ngModel)]="nameFile">
             </mat-form-field>
         </div>
         <div fxFlex fxLayoutAlign.lg="center">
-            <button mat-raised-button color="primary">
+            <button mat-raised-button color="primary" (click)="generarInforme()">
                 <mat-icon>assignment</mat-icon>
                 Generar Informe
             </button>
